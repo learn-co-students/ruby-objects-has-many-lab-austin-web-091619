@@ -1,21 +1,22 @@
 require_relative "song"
 class Artist
-    attr_accessor :name, :artist, :song
-
+    attr_accessor :name, :artist, :song, :all
     @@artist = []
-    @@all = []
+  
 
     def initialize(name)
         @name = name
+        @all_songs ||= []
+        @@artist << self
        
     end
 
     def songs
-       @@all
+       @all_songs
     end
 
     def add_song(song)
-       self.song
+      @all_songs << song
         
     end
 
