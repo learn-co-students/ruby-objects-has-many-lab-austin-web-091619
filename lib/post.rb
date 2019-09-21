@@ -3,6 +3,7 @@ require_relative 'author'
 class Post
     
     attr_reader :title
+    attr_accessor :author
 
     @@all = []
 
@@ -13,13 +14,10 @@ class Post
         @@all << self
     end
 
-    def author
-        self.author
-    end
-
-    def author_name
-        if self.author
-            self.author.name
+    def author_name 
+        if @author
+            @author.name
+        end
     end
 
     # CLASS METHODS BELOW

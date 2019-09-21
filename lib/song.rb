@@ -13,10 +13,6 @@ class Song
         @@all << self
     end
 
-    def artist
-        
-    end
-
     def artist_name
         if @artist
             @artist.name
